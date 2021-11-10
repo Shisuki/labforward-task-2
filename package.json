@@ -1,0 +1,45 @@
+{
+    "name": "task2",
+    "version": "1.0.0",
+    "description": "Labforward Home Assignment - Task 2 - Manipulation of Data from APIs",
+    "main": "dist/index.js",
+    "engines": {
+        "node": ">=16.0.0"
+    },
+    "scripts": {
+        "start": "nodemon",
+        "production": "cross-env APP_ENV=production node ./dist/index.js",
+        "build": "npx rimraf ./dist && tsc",
+        "lint": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Shisuki/labforward-task-2.git"
+    },
+    "author": "Zach Rachedi",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Shisuki/labforward-task-2/issues"
+    },
+    "homepage": "https://github.com/Shisuki/labforward-task-2#readme",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "cross-env": "^7.0.3",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "@types/cors": "^2.8.12",
+        "@types/express": "^4.17.13",
+        "@types/node": "^16.11.7",
+        "@typescript-eslint/eslint-plugin": "^5.3.1",
+        "@typescript-eslint/parser": "^5.3.1",
+        "eslint": "^8.2.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "nodemon": "^2.0.15",
+        "prettier": "^2.4.1",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.4.4"
+    }
+}
