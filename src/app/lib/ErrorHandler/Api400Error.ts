@@ -1,11 +1,11 @@
 import { BaseError } from './BaseError';
 import { HttpStatusCodes } from '..';
 
-export class Api404Error extends BaseError {
+export class Api400Error extends BaseError {
     constructor(
-        description = 'Not found.',
-        name = '404 Error',
-        statusCode = HttpStatusCodes.NOT_FOUND,
+        description = 'Bad Request',
+        name = '400 Bad Request Error',
+        statusCode = HttpStatusCodes.BAD_REQUEST,
         isOperational = true,
     ) {
         super(name, statusCode, description, isOperational);

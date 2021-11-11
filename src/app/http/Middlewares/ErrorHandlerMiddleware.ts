@@ -1,8 +1,9 @@
-import { Request, Response, NextFunction } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import { BaseError, errorHandler } from '../../lib/ErrorHandler';
 
 export const ErrorHandlerMiddleware = (error: Error, req: Request, res: Response, next: NextFunction): void => {
     errorHandler.handleError(error);
+
     const errorMessage = error.message || 'Internal Server Error';
 
     if (error instanceof BaseError) {
